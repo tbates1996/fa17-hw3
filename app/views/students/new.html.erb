@@ -1,0 +1,17 @@
+<%= form_tag students_path do %>
+				<%= label_tag :name,"Name" %>
+				<%= text_field_tag :name,nil, placeholder: @default_name %>
+
+				<%= label_tag :grade %>
+				<%= select_tag :grade,options_for_select(["Freshman","Sophomore", "Junior", "Senior"], "Freshman") %>
+				
+				<%= label_tag :gpa, "GPA" %>
+				
+				<%= number_field_tag :gpa,nil,{in: 0.0..4.0,placeholder: @default_gpa} %>
+				
+				<%= submit_tag "submit" %>
+				
+
+<% end %>
+
+
